@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Next Train</h1>
+  <table class="schedule" width="100%" align="center">
+    <tr>
+      <td>From</td>
+    </tr>
+    <tr>
+      <td>
+        <select #fromStation>
+          <option value="Tambaram">Tambaram</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>To</td>
+    </tr>
+    <tr>
+      <td>
+        <select #toStation>
+          <option value="Beach">Beach</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button (click)="getNextTrain(fromStation.value, toStation.value)">Get Next Train</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{schedule}}
+      </td>
+    </tr>
+  </table>
+</ion-content>
